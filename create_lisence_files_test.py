@@ -41,11 +41,11 @@ class Create_lisence_files_test(unittest.TestCase):
 
 if __name__ == '__main__':
     # unittest.main()
-    suite1=unittest.TestSuite().addTest(Create_lisence_files_test('test_create_lisence_files'))
-    print type(suite1)
+    suite=unittest.TestSuite()
+    suite.addTest(Create_lisence_files_test('test_create_lisence_files'))
     fp=open("..\\Report\\my_report.html",'wb')
     runner1=HTMLTestRunner.HTMLTestRunner(fp,title=u'测试报告',description='This is a create_test_report')
-    runner1.run(suite1)
+    runner1.run(suite)
     # discover=unittest.defaultTestLoader.discover('..\\TestCase',pattern='*_test.py')
     # for item in discover:
     #     print item
